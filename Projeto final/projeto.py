@@ -3,6 +3,7 @@
 
 import webbrowser
 
+# Função para exibir os dados com o codigo do município e código do cargo 
 def lista_candidato(matriz, cod_municipio, cod_cargo, indice_procurado):
     resultados = []
     for item in matriz:
@@ -17,8 +18,9 @@ def lista_candidato(matriz, cod_municipio, cod_cargo, indice_procurado):
             print("=-" * 20)  # Linha separadora entre os resultados
     else:
         print('Município não encontrado, Cargo Inválido ou Candidato não encontrado')
-    
 
+
+# Função para exibir os dados com o codigo do candidato
 def candidato(matriz, cod_candidato, indice_procurado):
     resultados2 = []
     for dados_candidato in matriz:
@@ -33,10 +35,9 @@ def candidato(matriz, cod_candidato, indice_procurado):
         print('Município não encontrado, Cargo Inválido ou Candidato não encontrado')
 
 
-
-
-
-indice_procurado = [17, 18, 16, 25]  # Informações que deseja extrair
+# Informações que deseja extrair
+indice_procurado = [17, 18, 16, 25]
+# Abrindo o arquivo CSV
 arq = open("consulta_cand_2024_PB.csv", "r")
 conteudo = arq.read()
 
@@ -79,7 +80,7 @@ while True:
         print('Município não encontrado, Cargo Inválido ou Candidato não encontrado')
         break
 
-
+#Fechar arquivo
 arq.close()
 
 
